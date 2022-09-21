@@ -1,4 +1,4 @@
-#region LOADING_AD_PANEL
+#region GAMEPLAY_LOADING_AD_PANEL
 [Title("LOADING_AD_PANEL")]
 
 public GameObject LoadingAd_Panel;

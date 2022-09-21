@@ -37,7 +37,7 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Level_Loading()
 
         if (HideLargeBannerBeforeLoadingScene)
         {
-            MadActionGamesAd.Instance.ShowLargeAdmobBanner();
+            MadActionGamesAd.Instance.HideLargeAdmobBanner();
         }
 
         SceneManager.LoadScene(3);

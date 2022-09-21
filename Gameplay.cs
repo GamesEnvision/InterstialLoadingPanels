@@ -48,7 +48,7 @@
         if (ShowNextAdInterstital)
         {
             yield return new WaitForSecondsRealtime(3.0f);
-            if (levelNumber > 4)
+            if (levelNumber > 5)
             {
                 if (levelNumber % 2 == 1)
                 {

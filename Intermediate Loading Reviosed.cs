@@ -23,6 +23,10 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Level_Loading()
             MadActionGamesAd.Instance.ShowLargeAdmobBanner();
         }
         yield return new WaitForSeconds(5f);
+        if (HideLargeBannerBeforeLoadingScene)
+        {
+            MadActionGamesAd.Instance.HideLargeAdmobBanner();
+        }
         SceneManager.LoadScene(3);
     }
 

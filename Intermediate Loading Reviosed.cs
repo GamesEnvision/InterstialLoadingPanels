@@ -5,6 +5,7 @@ public GameObject LoadingAd_Panel;
 public Text LoadingAd_PanelText;
 public bool ShowLevelLoadingIntersitialAd = true;
 public bool ShowIntermediateLoadingRectAd = true;
+public bool HideLargeBannerBeforeLoadingScene = true;
 
 public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Level_Loading()
 {
@@ -33,6 +34,12 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Level_Loading()
             MadActionGamesAd.Instance.ShowLargeAdmobBanner();
         }
         yield return new WaitForSeconds(5f);
+
+        if (HideLargeBannerBeforeLoadingScene)
+        {
+            MadActionGamesAd.Instance.ShowLargeAdmobBanner();
+        }
+
         SceneManager.LoadScene(3);
     }
 

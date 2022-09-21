@@ -35,10 +35,7 @@
         }
         else
         {
-            if (ShowQuitAdRect)
-            {
-                MadActionGamesAd.Instance.ShowLargeAdmobBanner();
-            }
+    
         }
 
     }

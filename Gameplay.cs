@@ -159,7 +159,7 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Pause()
         LoadingAd_PanelText.text = "Loading Ad";
         LoadingAd_Panel.SetActive(true);
         yield return new WaitForSecondsRealtime(1.0f);
-        MadActionGamesAd.Instance.ShowAdmobInterstitial();//LoadingAd Curtoutines
+        MadActionGamesAd.Instance.Admob_Unity();//LoadingAd Curtoutines
         yield return new WaitForSecondsRealtime(0.5f);
         LoadingAd_Panel.SetActive(false);
         if (ShowPauseAdRect)
@@ -186,7 +186,7 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Clear()
         LoadingAd_PanelText.text = "Loading Ad";
         LoadingAd_Panel.SetActive(true);
         yield return new WaitForSecondsRealtime(1.0f);
-        MadActionGamesAd.Instance.ShowAdmobInterstitial();//LoadingAd Curtoutines
+        MadActionGamesAd.Instance.Admob_Unity();//LoadingAd Curtoutines
         yield return new WaitForSecondsRealtime(0.5f);
         LoadingAd_Panel.SetActive(false);
 
@@ -218,7 +218,7 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Failed()
         LoadingAd_PanelText.text = "Loading Ad";
         LoadingAd_Panel.SetActive(true);
         yield return new WaitForSecondsRealtime(1.0f);
-        MadActionGamesAd.Instance.ShowAdmobInterstitial();//LoadingAd Curtoutines
+        MadActionGamesAd.Instance.Admob_Unity();//LoadingAd Curtoutines
         yield return new WaitForSecondsRealtime(0.5f);
         LoadingAd_Panel.SetActive(false);
 

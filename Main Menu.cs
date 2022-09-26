@@ -22,6 +22,7 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Quit()
     if (ShowQuitAdInterstital)
     {
         MadActionGamesAd.Instance.HideSmallBanner();
+        MadActionGamesAd.Instance.HideLargeAdmobBanner();
         LoadingAd_PanelText.text = "Loading Ad";
         LoadingAd_Panel.SetActive(true);
         yield return new WaitForSecondsRealtime(1.0f);

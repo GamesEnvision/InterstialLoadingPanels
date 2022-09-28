@@ -18,6 +18,7 @@ public bool ShowLoseAdRect = true;
 [Header("RESTART")]
 public bool ShowRestartAdInterstital = false;
 public bool ShowRestartAdRect = false;
+public bool HideLargeBannerBeforeRestarting = true;
 
 [Header("HOME")]
 public bool ShowHomeAdInterstital = false;
@@ -34,14 +35,39 @@ public IEnumerator ShowLoadingAd_Admob_With_Large_Banner_Restart()
     /*Enable Gameplay Loading Panel from Where You Will Call this couroutines*/
     if (ShowRestartAdInterstital)
     {
+        if (HideLargeBannerBeforeRestarting)
+        {
+            yield return new WaitForSecondsRealtime(3.5f);
+            MadActionGamesAd.Instance.HideLargeAdmobBanner();
+            yield return new WaitForSecondsRealtime(0.5f);
+            SceneManager.LoadScene(3);
 
-        yield return new WaitForSecondsRealtime(4f);
-        SceneManager.LoadScene(3);
+        }
+        else
+        {
+            yield return new WaitForSecondsRealtime(4f);
+            SceneManager.LoadScene(3);
+
+
+        }
+
     }
     else
     {
-        yield return new WaitForSecondsRealtime(4f);
-        SceneManager.LoadScene(3);
+        if (HideLargeBannerBeforeRestarting)
+        {
+            yield return new WaitForSecondsRealtime(3.5f);
+            MadActionGamesAd.Instance.HideLargeAdmobBanner();
+            yield return new WaitForSecondsRealtime(0.5f);
+            SceneManager.LoadScene(3);
+        }
+        else
+        {
+            yield return new WaitForSecondsRealtime(4f);
+            SceneManager.LoadScene(3);
+
+        }
+       
     }
 
 }
